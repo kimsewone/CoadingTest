@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
-
+//URL:https://school.programmers.co.kr/learn/courses/30/lessons/340213
 //[PCCP 기출문제] 1번 / 동영상 재생기
 //비주얼스투디오에서 확인해본바로는 정상작동이 되는거 같은데  
 //사이트에서 함수부분만 넣어서 "코드실행"하면 애러가 나는데 이유를 잘 모르겠습니다.
