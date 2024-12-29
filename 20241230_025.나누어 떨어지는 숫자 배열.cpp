@@ -1,28 +1,27 @@
-//URL : https://school.programmers.co.kr/learn/courses/30/lessons/76501
+//URL : https://school.programmers.co.kr/learn/courses/30/lessons/12910
 
 #include <string>
 #include <vector>
-
+#include <algorithm>
 using namespace std;
 
-int solution(vector<int> absolutes, vector<bool> signs) {
-    int answer = 123456789;
+vector<int> solution(vector<int> arr, int divisor) {
+    vector<int> answer;
 
-    int Idx = 0;
-    int Sum = 0;
-    for (int num : absolutes)
+    for (int num : arr)
     {
-        if (signs[Idx])
+        if (0 == num % divisor)
         {
-            Sum += num;
+            answer.push_back(num);
         }
-        else {
-            Sum -= num;
-        }
-        Idx++;
-        if (1000 <= Idx)
-            break;
+    }
+    if (answer.size() == 0)
+    {
+        answer.push_back(-1);
+    }
+    else {
+        sort(answer.begin(), answer.end());
     }
 
-    return answer = Sum;
+    return answer;
 }
