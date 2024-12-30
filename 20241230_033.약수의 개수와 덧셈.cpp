@@ -1,5 +1,9 @@
 //URL : https://school.programmers.co.kr/learn/courses/30/lessons/77884#
 
+#include <string>
+#include <vector>
+#include <algorithm>
+
 int solution(int left, int right) {
 	int answer = 0;
 
