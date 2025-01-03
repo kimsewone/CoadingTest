@@ -41,7 +41,7 @@ int solution(vector<vector<int>> sizes) {
             sArr2[1] = sizes[j][1];
         }
     }
-  
+
     secondHValue = sizes[sArr2[0]][1];
     answer = firstWValue * secondHValue;
     return answer;
