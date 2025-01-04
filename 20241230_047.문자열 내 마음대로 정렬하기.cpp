@@ -39,18 +39,13 @@ bool campare(const string& A, const string& B, int n)
 vector<string> solution(vector<string> strings, int n) {
 
     vector<string> answer;
-    vector<string> V1;
-    for (int i = 0; i < strings.size();++i) {
+ 
+    for (int i = 0; i < strings.size();++i)
+        answer.push_back(strings[i]);
 
-        // stringsMap.insert(make_pair(strings[i][n], strings[i]));
-        V1.push_back(strings[i]);
-    }
-    // sort(V1.begin(), V1.end(), campare ) ;
-    sort(V1.begin(), V1.end(), [n](const string& A1, const string& B1) {
-        //  cout << A1 + ", " << B1 << endl;
-        return campare(A1, B1, n);
-        });
-    int dafdsf = 9;
-    return V1;
+    sort(answer.begin(), answer.end(), [n](const string& A, const string& B) {
+        return campare(A, B, n);
+     });
 
+    return answer;
 }
