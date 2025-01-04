@@ -30,15 +30,13 @@ int solution(string s) {
         "eight",
         "nine"
     };
-    multimap<int, string> mapResult;
-    int temp = -1;
-    int pos = 0;
-    multimap<int, int> v2;
+
+    int temp = 0;
     int curPos = 0;
-    int temp2 = -1;
+    int findIdx = 0;
     string findStr = "";
     vector<int> findStrIdxArr;
-    int findIdx = 0;
+   
     while (true) {
         for (int i = 0; i < V.size(); ++i)
         {
@@ -47,7 +45,6 @@ int solution(string s) {
             {
                 findIdx = 10 <= i ? i - 10 : i;
                 findStrIdxArr.push_back(findIdx);
-
                 findStr = V[i];
                 curPos = temp + findStr.length();
                 break;
