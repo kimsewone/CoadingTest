@@ -4,7 +4,7 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-
+ 
 vector<int> solution(vector<int> lottos, vector<int> win_nums) {
     vector<int> answer;
     vector<int> tempArr;
