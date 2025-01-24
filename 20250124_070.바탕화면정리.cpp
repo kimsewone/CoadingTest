@@ -5,16 +5,6 @@
 #include <algorithm>
 using namespace std;
 
-struct XYPos
-{
-    int x = 0 ;
-    int y = 0;
-    XYPos(int _x , int _y)
-    {
-        x= _x;
-        y= _y;
-    }
-};
 vector<int> solution(vector<string> wallpaper) {
     vector<int> answer;
     vector<int> XArr;
@@ -33,13 +23,18 @@ vector<int> solution(vector<string> wallpaper) {
     
     sort(XArr.begin(),XArr.end());
     sort(YArr.begin(),YArr.end());
-    XYPos A = XYPos( XArr[0],YArr[0] );
-    XYPos B = XYPos( XArr[XArr.size()-1], YArr[YArr.size()-1] );
-    B.x +=1;
-    B.y +=1;
-    answer.push_back(A.x);
-    answer.push_back(A.y);
-    answer.push_back(B.x);
-    answer.push_back(B.y);   
+    int StartX = 0;
+    int StartY = 0;
+    int EndX = 0;
+    int EndY = 0;
+    StartX = XArr[0];
+    StartY = YArr[0];
+    EndX = XArr[XArr.size()-1]+1;
+    EndY = YArr[YArr.size()-1]+1;
+
+    answer.push_back(StartX);
+    answer.push_back(StartY);
+    answer.push_back(EndX);
+    answer.push_back(EndY);   
     return answer;
 }
