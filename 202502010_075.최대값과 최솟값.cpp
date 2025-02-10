@@ -10,7 +10,6 @@ string solution(string s) {
     map<int,int> numMap;
     int result = -1;
     int curPos = 0;
-    int pos = 0;
     string temp = "";
     while (true)
     {
